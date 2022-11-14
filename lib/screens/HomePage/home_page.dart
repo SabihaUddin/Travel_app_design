@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 10,),
-            Container(
+            SizedBox(
               height: 200,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -107,14 +107,14 @@ class _HomePageState extends State<HomePage> {
                     return ItemCard(placeDetails: placeDetails[index],
                       press: () =>
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => DetailsPage())),
+                              builder: (context) => DetailsPage(placeDetails: placeDetails[index],))),
                     );
                   }),
             ),
             const Text('Recommended',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             const SizedBox(height: 10,),
-            Container(
+            SizedBox(
               height: 140,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                     return PopularItemCard(placeDetails: placeDetails[index],
                       press: () =>
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => DetailsPage())),
+                              builder: (context) => DetailsPage(placeDetails: placeDetails[index],))),
                     );
                   }),
             ),

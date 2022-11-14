@@ -15,12 +15,12 @@ class ItemCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.only(right: 14),
+        margin: const EdgeInsets.only(right: 14),
         child: Stack(
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Container(
+              child: SizedBox(
                 height: 190,
                 width: 160,
                 child: Image.asset(
@@ -29,7 +29,7 @@ class ItemCard extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 180,
               width: 150,
               child: Column(
@@ -48,7 +48,7 @@ class ItemCard extends StatelessWidget {
                       backgroundColor: Colors.grey,
                       label: Text(
                         placeDetails.title,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       )),
                   Row(
                     children: [
@@ -56,13 +56,13 @@ class ItemCard extends StatelessWidget {
                           backgroundColor: Colors.grey,
                           label: Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.orange,
                               ),
                               Text(
                                 "${placeDetails.rating}",
-                                style: TextStyle(color: Colors.white),
+                                style: const TextStyle(color: Colors.white),
                               ),
                             ],
                           )
